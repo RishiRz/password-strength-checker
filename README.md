@@ -185,6 +185,4 @@ This project demonstrates practical experience with:
 
 GitHub: [RishiRz](https://github.com/RishiRz)
 
-## 📜 License
 
-This project is available for educational and learning purposes. You may add an MIT License if you want to allow others to reuse and modify the code under its terms.
