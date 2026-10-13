@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Strength Checker</title>
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <main class="card">
+        <div class="lock">🔐</div>
+        <p class="eyebrow">CYBERSECURITY TOOL</p>
+        <h1>Password Strength Checker</h1>
+        <p class="subtitle">
+            Check your password and discover ways to improve it.
+        </p>
+
+        <form id="passwordForm">
+            <label for="password">Test password</label>
+
+            <div class="input-group">
+                <input id="password" type="password"
+                       placeholder="Enter a test password"
+                       autocomplete="off" required>
+                <button id="toggle" type="button">Show</button>
+            </div>
+
+            <div class="meter">
+                <div id="meterFill"></div>
+            </div>
+
+            <div class="meter-info">
+                <span id="strength">Not checked</span>
+                <span id="score">0 / 6</span>
+            </div>
+
+            <button class="analyze" type="submit">
+                Analyze Password
+            </button>
+        </form>
+
+        <section aria-live="polite">
+            <h2>Password requirements</h2>
+            <ul id="checks">
+                <li>Enter a password to begin.</li>
+            </ul>
+
+            <h2>Improvement suggestions</h2>
+            <ul id="suggestions">
+                <li>Use a long, unique password.</li>
+            </ul>
+        </section>
+
+        <p id="error" role="alert"></p>
+
+        <p class="privacy">
+            Educational tool. Never enter a real or reused password.
+            This app does not intentionally save passwords.
+        </p>
+    </main>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
